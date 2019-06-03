@@ -1,5 +1,6 @@
 package messagersample.kticket.com.fbmessager;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,14 @@ public class LoginActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        btn_login.setOnClickListener(v->{
+            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+            startActivity(intent);
+        });
+
+
 
         txt_password.addTextChangedListener(new TextWatcher() {
             @Override
